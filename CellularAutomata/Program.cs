@@ -1,7 +1,7 @@
 ﻿using CellularAutomata;
 
 Grid grid = new(40, 80);
-grid.GenerateNoise(40);
+grid.GenerateNoise(50);
 string? answer;
 do
 {
@@ -10,7 +10,7 @@ do
     answer = Console.ReadLine();
     if(answer != null && answer == "")
     {
-        grid.ApplyCellularAutomata(3);
+        grid.ApplyCellularAutomata(4);
     }
 }while (answer != null && answer.ToLower() != "x");
 

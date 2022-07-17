@@ -37,7 +37,7 @@ public class Grid
         }
     }
 
-    public void ApplyCellularAutomata(int numberOfWalls=4)
+    public void ApplyCellularAutomata(int maxNeighborCount=4)
     {
         int wallCount;
         char[,] temp = new char[_grid.GetLength(0), _grid.GetLength(1)];
@@ -47,7 +47,7 @@ public class Grid
             {
                 temp[row, col] = Floor;
                 wallCount = GetWallCount(row, col);
-                if(wallCount > numberOfWalls)
+                if(wallCount > maxNeighborCount)
                 {
                     temp[row, col] = Wall;
                 }
