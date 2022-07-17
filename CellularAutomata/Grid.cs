@@ -47,7 +47,7 @@ public class Grid
             {
                 temp[row, col] = Floor;
                 wallCount = GetWallCount(row, col);
-                if(wallCount > maxNeighborCount)
+                if(wallCount >= maxNeighborCount)
                 {
                     temp[row, col] = Wall;
                 }
